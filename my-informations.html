@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagro - My Informations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src=".//img/logo.svg" alt="MILAGRO Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                    <a href="./contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="./shop"><img src=".//img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#"><img src=".//img/Group 9.svg" alt="Search"></a>
+                    <a href="#"><img src=".//img/cart.svg" alt="Cart"></a>
+                    <a href="./account.html"><img src=".//img/account.svg" alt="Account"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="profile-header">
+        <h1>My Profile</h1>
+    </div>
+
+    <div class="profile-content">
+        <div class="sidebar">
+            <ul>
+                <li><a href="./myinformations.html" class="active">My Information</a></li>
+                <li><a href="./myadresses.html">My Addresses</a></li>
+                <li><a href="./orders/order.html">My Orders</a></li>
+                <li><a href="./logout.html">Log Out</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content profile-main">
+            <div class="form-container profile-form">
+                <form action="./update.html" method="post">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" value="User First Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" value="User Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="user@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" value="+965 ########">
+                    </div>
+                    <button class="update-btn">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
+                <div class="brand-name">MILAGRO</div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">LINKS</h3>
+                <div class="footer-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">OUR ADDRESS</h3>
+                <div>
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">FOLLOW US</h3>
+                <div class="social-icons">
+                    <div class="group-23">
+                        <img class="vector-3" src=".//img/vector.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

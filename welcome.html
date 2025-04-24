@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagro - Welcome</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="MILAGRO Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                    <a href="./contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="./shop"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="#"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="./account.html"><img src="./img/account.svg" alt="Account"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" id="welcome-page">
+        <h1 class="welcome-heading">Welcome<span class="asterisk">*</span></h1>
+        <p class="welcome-text">Enter your mobile number</p>
+        <p class="welcome-text">We will send you a confirmation code</p>
+        <div class="form-container">
+            <form id="phone-form" action="verify-otp.html">
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <div class="phone-input">
+                        <span class="phone-prefix">+965</span>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="" required aria-label="Phone number">
+                    </div>
+                </div>
+                <button type="submit" class="btn">Continue</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
+                <div class="brand-name">MILAGRO</div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">LINKS</h3>
+                <div class="footer-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">OUR ADDRESS</h3>
+                <div>
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">FOLLOW US</h3>
+                <div class="social-icons">
+                    <div class="group-23">
+                        <img class="vector-3" src="./img/vector.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('phone-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'verify-otp.html';
+        });
+    </script>
+</body>
+</html>

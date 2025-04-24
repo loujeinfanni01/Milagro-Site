@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/slider1.js" defer></script>
+</head>
+<body>
+<!--shoping card --> 
+    <div class="modal-overlay" id="cartModal">
+    <div class="modal-content cart-content">
+        <div class="modal-header">
+            <h2>Shopping Cart <span class="star">✧</span></h2>
+            <button class="close-modal">×</button>
+        </div>
+        <div class="modal-body cart-body">
+            <div class="cart-items">
+                <!-- Example Cart Item -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./img/mask-group.png" alt="Luxury Macaron Box">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">Luxury Macaron Box</h3>
+                        <div class="cart-item-price">27.000 KD</div>
+                        <div class="cart-item-actions">
+                            <div class="quantity-control">
+                                <button class="quantity-btn decrease">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn increase">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Cart Item -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Milagro Diffuser">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">Milagro Diffuser</h3>
+                        <div class="cart-item-price">13.000 KD</div>
+                        <div class="cart-item-actions">
+                            <div class="quantity-control">
+                                <button class="quantity-btn decrease">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn increase">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Sub Total</span>
+                    <span class="subtotal-amount">40.000 KD</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span class="delivery-amount">1.000 KD</span>
+                </div>
+                <div class="promo-code">
+                    <input type="text" placeholder="Promo Code">
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span class="total-amount">41.000 KD</span>
+                </div>
+                <button class="btn btn-checkout">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/logo.svg" alt="MILAGRO Logo">
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="/new-arrivals">New arrivals</a>
+                <a href="/contact">Contacts</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                <a href="#" class="icon-link"id="wishlistIcon"> <img src="./img/heart-1.png"  alt="Wishlist"></a>
+            
+                <a href="#" class="icon-link"id="cartIcon"><img src="./img/cart.svg" id="cartIcon"  alt="Cart"></a>
+                <a href="#" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
+            </div>
+        </nav>
+        
+    </div>
+</header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="brand-name1">MILAGRO</h1>
+            <p class="tagline">Premium Chocolate for Every Special Occasion</p>
+            <button class="shop-now-btn" role="button">Shop now</button>
+        </div>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <div class="oval-container">
+                        <div class="oval-image principal">
+                            <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Chocolats de luxe">
+                        </div>
+                        <div class="oval-image secondary">
+                            <img src="./img/1-0000-layer-4-2.png" alt="Assortiment de chocolats">
+                        </div>
+                        
+                        .oval-image
+                        <div class="next-container" role="button" aria-label="Next Slide">
+                            <span class="next-text">Next</span>
+                            <img src="./img/next-1.png" alt="Next arrow" class="next-arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="star top-left">
+                <img src="./img/star--1--4.png" alt="Star decoration">
+            </div>
+            <div class="star bottom-right">
+                <img src="./img/star--1--4.png" alt="Star decoration">
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="feature">
+            <div class="feature-header">
+                <img class="img-feature" src="./img/best-seller-1.png" alt="Best Quality Icon">
+                <h3 class="feature-title">Best Quality</h3>
+            </div>
+            <p class="feature-desc">Lorem ipsum dolor sit amet, tempor incididunt ut labore</p>
+        </div>
+        <div class="feature-divider"></div>
+        <div class="feature">
+            <div class="feature-header">
+                <img class="img-feature" src="./img/fast-delivery-1.png" alt="Fast Delivery Icon">
+                <h3 class="feature-title">Fast Delivery</h3>
+            </div>
+            <p class="feature-desc">Lorem ipsum dolor sit amet, tempor incididunt ut labore</p>
+        </div>
+        <div class="feature-divider"></div>
+        <div class="feature">
+            <div class="feature-header">
+                <img class="img-feature" src="./img/touchscreen-1.png" alt="Big Selection Icon">
+                <h3 class="feature-title">Big Selection</h3>
+            </div>
+            <p class="feature-desc">Lorem ipsum dolor sit amet, tempor incididunt ut labore</p>
+        </div>
+    </section>
+
+    <section class="best-sellers-section">
+        <h2 class="section-title">Best Seller</h2>
+        <div class="products-slider-container">
+            <button class="nav-button prev-button">❮</button>
+            <div class="products-slider">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/mask-group-4.png" alt="Blue Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Blue Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/mask-group-2.png" alt="Green Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Green Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/3d7c31c50e67f1a98fee5e3008637e01-1-1.png" alt="Pink Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pink Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/mask-group.png" alt="Red Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Red Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Purple Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Purple Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./img/mask-group-1.png" alt="Orange Giveaway Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Orange Giveaway Tray</h3>
+                        <div class="product-details">
+                            <span>30 pieces</span>
+                            <span class="product-price">29.000 KD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-button next-button">❯</button>
+        </div>
+    </section>
+
+    <section class="luxury">
+        <div class="container">
+            <h1 class="product-title">Milagro Diffuser Sticks Chocolate</h1>
+            <div class="product-description">
+                <span class="line"></span>
+                <p>Luxury chocolate for the luxurious occasions. The perfect scent for chocoholics rich and sweet and full of that intense cocoa smell.</p>
+            </div>
+            <div class="product-image-container">
+                <img src="./img/vector-3.svg" class="vector-top">
+                <div class="oval-frame">
+                    <img src="./img/untitled-1-0003-layer-3.png" alt="Milagro Diffuser Sticks Chocolate">
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+                <img src="./img/vector-2.svg" class="vector-bottom">
+                <img src="./img/star--1--4.png" class="star-1">
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h3>Add a Touch of Luxury to Your Celebrations</h3>
+            <p>Make your special occasions unforgettable with our elegant silver trays. Now available in-store. Perfect for serving your guests in style and making every moment memorable.</p>
+            <section class="video">
+                <div class="video-container">
+                    <video src="./img/video2.mp4" autoplay muted loop playsinline></video>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <div class="products-container">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Mix Coins Box">
+            </div>
+            <h3 class="product-name">Mix Coins Box</h3>
+            <div class="product-details">
+                <p class="product-quantity">50 pcs</p>
+                <p class="product-price">19.000 KD</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/mask-group.png" alt="Mix Chocolates (Medium Box)">
+            </div>
+            <h3 class="product-name">Mix Chocolates (Medium Box)</h3>
+            <div class="product-details">
+                <p class="product-quantity">25 pcs</p>
+                <p class="product-price">12.000 KD</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/0e44c85c95bd23e293342b0753ea1dad-2.png" alt="Mix Chocolates (Large Box)">
+            </div>
+            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
+            <div class="product-details">
+                <p class="product-quantity">49 pcs</p>
+                <p class="product-price">19.000 KD</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/048e6c0ae8f9b15fbad711837c44f479-1.png" alt="Mix Chocolates (Large Box)">
+            </div>
+            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
+            <div class="product-details">
+                <p class="product-quantity">49 pcs</p>
+                <p class="product-price">19.000 KD</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Mix Chocolates (Large Box)">
+            </div>
+            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
+            <div class="product-details">
+                <p class="product-quantity">49 pcs</p>
+                <p class="product-price">19.000 KD</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Mix Chocolates (Large Box)">
+            </div>
+            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
+            <div class="product-details">
+                <p class="product-quantity">49 pcs</p>
+                <p class="product-price">19.000 KD</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
+                <div class="brand-name">MILAGRO</div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">LINKS</h3>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">OUR ADDRESS</h3>
+                <div>
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">FOLLOW US</h3>
+                <div class="social-icons">
+                    <div class="group-23">
+                        <img class="vector-3" src="./img/vector.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script >
+        // Script pour la page de boutique Milagro
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Éléments de la fenêtre modale
+    const modal = document.getElementById('notifyModal');
+    const closeModalBtn = document.querySelector('.close-modal');
+    const notifyBtns = document.querySelectorAll('.btn-notify');
+    
+    // Boutons de favoris
+    const favoriteBtns = document.querySelectorAll('.favorite-btn');
+    
+    // Boutons d'ajout au panier
+    const addToCartBtns = document.querySelectorAll('.btn-add-cart');
+    const wishlistIcon = document.getElementById('wishlistIcon');
+    const cartIcon = document.getElementById('cartIcon');
+    function openWishlistModal() {
+        const modal = document.getElementById('wishlistModal');
+        modal.style.display = 'flex'; // Affiche la modale
+    }
+
+    // Fonction pour fermer la modale
+    function closeWishlistModal() {
+        const modal = document.getElementById('wishlistModal');
+        modal.style.display = 'none'; // Cache la modale
+    }
+    // Liens de catégories
+    const categoryLinks = document.querySelectorAll('.category-link');
+    
+    // Produits
+    const productCards = document.querySelectorAll('.product-card');
+    
+    // Fonction pour ouvrir la fenêtre modale
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+    }
+    
+    // Fonction pour fermer la fenêtre modale
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Réactiver le défilement de la page
+    }
+    
+    // Ajouter des écouteurs d'événements pour les boutons "Notify Me"
+    notifyBtns.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+    
+    // Fermer la fenêtre modale en cliquant sur le bouton de fermeture
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    // Fermer la fenêtre modale en cliquant en dehors de celle-ci
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Fermer la fenêtre modale avec la touche Echap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    // Gestion du formulaire de notification
+    const notifyForm = document.getElementById('notifyForm');
+    if (notifyForm) {
+        notifyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            
+            // Validation simple
+            if (!firstName || !lastName || !phone || !email) {
+                alert('Veuillez remplir tous les champs');
+                return;
+            }
+            
+            // Simuler l'envoi du formulaire
+            console.log('Formulaire soumis:', { firstName, lastName, phone, email });
+            
+            // Réinitialiser le formulaire et fermer la fenêtre modale
+            notifyForm.reset();
+            closeModal();
+            
+            // Afficher un message de confirmation
+            alert('Merci ! Vous serez notifié lorsque le produit sera disponible.');
+        });
+    }
+    
+    // Gestion des boutons de favoris
+    favoriteBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const icon = this.querySelector('i');
+            
+            // Changer l'icône en fonction de l'état
+            if (this.classList.contains('active')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+            }
+        });
+    });
+    
+    // Gestion des boutons d'ajout au panier
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const productCard = this.closest('.product-card');
+            const productTitle = productCard.querySelector('.product-title').textContent;
+            const productPrice = productCard.querySelector('.current-price').textContent;
+            
+            console.log('Produit ajouté au panier:', { productTitle, productPrice });
+            
+            // Animation de confirmation
+            this.textContent = 'Ajouté !';
+            this.style.backgroundColor = '#4CAF50';
+            
+            // Réinitialiser le bouton après un délai
+            setTimeout(() => {
+                this.textContent = '+ ADD TO CART';
+                this.style.backgroundColor = '';
+            }, 2000);
+        });
+    });
+    
+    // Fonction pour filtrer les produits par catégorie
+    function filterProducts(category) {
+        productCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            // Si la catégorie est "all" ou si la carte correspond à la catégorie sélectionnée
+            if (category === 'all' || cardCategory === category) {
+                card.classList.remove('hidden');
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 10);
+            } else {
+                card.classList.remove('visible');
+                card.classList.add('hidden');
+            }
+        });
+    }
+    
+    // Gestion des liens de catégories
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Supprimer la classe active de tous les liens
+            categoryLinks.forEach(l => l.classList.remove('active'));
+            
+            // Ajouter la classe active au lien cliqué
+            this.classList.add('active');
+            
+            // Récupérer la catégorie sélectionnée
+            const category = this.getAttribute('data-category');
+            
+            // Filtrer les produits
+            filterProducts(category);
+        });
+    });
+    
+    // Initialiser l'affichage avec tous les produits visibles
+    productCards.forEach(card => {
+        card.classList.add('visible');
+    });
+});
+// Script pour la page de boutique Milagro
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Éléments de la fenêtre modale
+    const notifyModal = document.getElementById('notifyModal');
+    const wishlistModal = document.getElementById('wishlistModal');
+    const cartModal = document.getElementById('cartModal');
+    const closeModalBtns = document.querySelectorAll('.close-modal');
+    const notifyBtns = document.querySelectorAll('.btn-notify');
+    
+    // Boutons de navigation
+    const wishlistIcon = document.getElementById('wishlistIcon');
+    const cartIcon = document.getElementById('cartIcon');
+    
+    // Boutons de favoris
+    const favoriteBtns = document.querySelectorAll('.favorite-btn');
+    
+    // Boutons d'ajout au panier
+    const addToCartBtns = document.querySelectorAll('.btn-add-cart');
+    
+    // Liens de catégories
+    const categoryLinks = document.querySelectorAll('.category-link');
+    
+    // Produits
+    const productCards = document.querySelectorAll('.product-card');
+    
+    // Panier et liste de souhaits
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+    // Fonction pour ouvrir la fenêtre modale
+    function openModal(modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+    }
+    
+    // Fonction pour fermer la fenêtre modale
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Réactiver le défilement de la page
+    }
+    
+    // Fermer toutes les modales
+    function closeAllModals() {
+        const modals = [notifyModal, wishlistModal, cartModal];
+        modals.forEach(modal => closeModal(modal));
+    }
+    
+    // Ajouter des écouteurs d'événements pour les boutons "Notify Me"
+    notifyBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            openModal(notifyModal);
+        });
+    });
+    
+    // Ouvrir la wishlist
+    wishlistIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        renderWishlist();
+        openModal(wishlistModal);
+    });
+    
+    // Ouvrir le panier
+    cartIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        renderCart();
+        openModal(cartModal);
+    });
+    
+    // Fermer les fenêtres modales en cliquant sur le bouton de fermeture
+    closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            closeAllModals();
+        });
+    });
+    
+    // Fermer les fenêtres modales en cliquant en dehors de celles-ci
+    [notifyModal, wishlistModal, cartModal].forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeAllModals();
+            }
+        });
+    });
+    
+    // Fermer les fenêtres modales avec la touche Echap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+    
+    // Gestion du formulaire de notification
+    const notifyForm = document.getElementById('notifyForm');
+    if (notifyForm) {
+        notifyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            
+            // Validation simple
+            if (!firstName || !lastName || !phone || !email) {
+                alert('Veuillez remplir tous les champs');
+                return;
+            }
+            
+            // Simuler l'envoi du formulaire
+            console.log('Formulaire soumis:', { firstName, lastName, phone, email });
+            
+            // Réinitialiser le formulaire et fermer la fenêtre modale
+            notifyForm.reset();
+            closeModal(notifyModal);
+            
+            // Afficher un message de confirmation
+            alert('Merci ! Vous serez notifié lorsque le produit sera disponible.');
+        });
+    }
+    
+    // Gestion des boutons de favoris
+    favoriteBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productCard = this.closest('.product-card');
+            const productId = productCard.getAttribute('data-id');
+            const productName = productCard.getAttribute('data-name');
+            const productPrice = productCard.getAttribute('data-price');
+            const productImage = productCard.getAttribute('data-image');
+            
+            // Vérifier si le produit est déjà dans la liste de souhaits
+            const index = wishlist.findIndex(item => item.id === productId);
+            
+            if (index === -1) {
+                // Ajouter à la liste de souhaits
+                wishlist.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage
+                });
+                this.classList.add('active');
+                this.querySelector('i').style.color = 'var(--color-heart)';
+            } else {
+                // Retirer de la liste de souhaits
+                wishlist.splice(index, 1);
+                this.classList.remove('active');
+                this.querySelector('i').style.color = '';
+            }
+            
+            // Sauvegarder dans le localStorage
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            
+            // Mettre à jour l'affichage de la liste de souhaits si elle est ouverte
+            if (wishlistModal.classList.contains('active')) {
+                renderWishlist();
+            }
+        });
+    });
+    
+    // Gestion des boutons d'ajout au panier
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const productCard = this.closest('.product-card');
+            const productId = productCard.getAttribute('data-id');
+            const productName = productCard.getAttribute('data-name');
+            const productPrice = productCard.getAttribute('data-price');
+            const productImage = productCard.getAttribute('data-image');
+            
+            // Vérifier si le produit est déjà dans le panier
+            const index = cart.findIndex(item => item.id === productId);
+            
+            if (index === -1) {
+                // Ajouter au panier
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            } else {
+                // Incrémenter la quantité
+                cart[index].quantity++;
+            }
+            
+            // Sauvegarder dans le localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Animation de confirmation
+            this.textContent = 'Ajouté !';
+            this.style.backgroundColor = '#4CAF50';
+            
+            // Réinitialiser le bouton après un délai
+            setTimeout(() => {
+                this.textContent = '+ ADD TO CART';
+                this.style.backgroundColor = '';
+            }, 2000);
+            
+            // Mettre à jour l'affichage du panier s'il est ouvert
+            if (cartModal.classList.contains('active')) {
+                renderCart();
+            }
+        });
+    });
+    
+    // Fonction pour afficher la liste de souhaits
+    function renderWishlist() {
+        const wishlistGrid = document.querySelector('.wishlist-grid');
+        
+        // Vider la grille
+        wishlistGrid.innerHTML = '';
+        
+        if (wishlist.length === 0) {
+            wishlistGrid.innerHTML = '<p>Votre liste de souhaits est vide.</p>';
+            return;
+        }
+        
+        // Ajouter chaque produit à la grille
+        wishlist.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'wishlist-item';
+            productElement.innerHTML = `
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                    <button class="favorite-btn active" data-id="${product.id}">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">${product.name}</h3>
+                    <div class="product-meta">
+                        <span class="product-quantity"></span>
+                        <span class="product-price">
+                            <span class="current-price">${formatPrice(product.price)} KD</span>
+                        </span>
+                    </div>
+                    <button class="btn btn-add-cart" data-id="${product.id}">+ ADD TO CART</button>
+                </div>
+            `;
+            wishlistGrid.appendChild(productElement);
+            
+            // Ajouter un écouteur d'événement pour le bouton de suppression des favoris
+            const favoriteBtn = productElement.querySelector('.favorite-btn');
+            favoriteBtn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                removeFromWishlist(productId);
+            });
+            
+            // Ajouter un écouteur d'événement pour le bouton d'ajout au panier
+            const addToCartBtn = productElement.querySelector('.btn-add-cart');
+            addToCartBtn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                const product = wishlist.find(item => item.id === productId);
+                
+                // Vérifier si le produit est déjà dans le panier
+                const index = cart.findIndex(item => item.id === productId);
+                
+                if (index === -1) {
+                    // Ajouter au panier
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: 1
+                    });
+                } else {
+                    // Incrémenter la quantité
+                    cart[index].quantity++;
+                }
+                
+                // Sauvegarder dans le localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // Animation de confirmation
+                this.textContent = 'Ajouté !';
+                this.style.backgroundColor = '#4CAF50';
+                
+                // Réinitialiser le bouton après un délai
+                setTimeout(() => {
+                    this.textContent = '+ ADD TO CART';
+                    this.style.backgroundColor = '';
+                }, 2000);
+            });
+        });
+    }
+    
+    // Fonction pour afficher le panier
+    function renderCart() {
+        const cartItems = document.querySelector('.cart-items');
+        const subtotalElement = document.querySelector('.subtotal-amount');
+        const totalElement = document.querySelector('.total-amount');
+        
+        // Vider la liste
+        cartItems.innerHTML = '';
+        
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p>Votre panier est vide.</p>';
+            subtotalElement.textContent = '0.000 KD';
+            totalElement.textContent = '1.000 KD';
+            return;
+        }
+        
+        // Calculer le sous-total
+        const subtotal = cart.reduce((total, item) => {
+            return total + (item.price * item.quantity);
+        }, 0);
+        
+        // Frais de livraison fixes
+        const delivery = 1000;
+        
+        // Total
+        const total = subtotal + delivery;
+        
+        // Mettre à jour les montants
+        subtotalElement.textContent = `${formatPrice(subtotal)} KD`;
+        totalElement.textContent = `${formatPrice(total)} KD`;
+        
+        // Ajouter chaque produit à la liste
+        cart.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'cart-item';
+            productElement.innerHTML = `
+                <div class="cart-item-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="cart-item-details">
+                    <h3 class="cart-item-title">${product.name}</h3>
+                    <div class="cart-item-price">${formatPrice(product.price)} KD</div>
+                    <div class="cart-item-actions">
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease" data-id="${product.id}">-</button>
+                            <input type="text" class="quantity-input" value="${product.quantity}" readonly>
+                            <button class="quantity-btn increase" data-id="${product.id}">+</button>
+                        </div>
+                        <button class="remove-btn" data-id="${product.id}">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItems.appendChild(productElement);
+            
+            // Ajouter des écouteurs d'événements pour les boutons de quantité
+            const decreaseBtn = productElement.querySelector('.decrease');
+            const increaseBtn = productElement.querySelector('.increase');
+            const removeBtn = productElement.querySelector('.remove-btn');
+            
+            decreaseBtn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                updateCartItemQuantity(productId, -1);
+            });
+            
+            increaseBtn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                updateCartItemQuantity(productId, 1);
+            });
+            
+            removeBtn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                removeFromCart(productId);
+            });
+        });
+    }
+    
+    // Fonction pour mettre à jour la quantité d'un produit dans le panier
+    function updateCartItemQuantity(productId, change) {
+        const index = cart.findIndex(item => item.id === productId);
+        
+        if (index !== -1) {
+            cart[index].quantity += change;
+            
+            // Supprimer le produit si la quantité est inférieure ou égale à 0
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            
+            // Sauvegarder dans le localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Mettre à jour l'affichage
+            renderCart();
+        }
+    }
+    
+    // Fonction pour supprimer un produit du panier
+    function removeFromCart(productId) {
+        const index = cart.findIndex(item => item.id === productId);
+        
+        if (index !== -1) {
+            cart.splice(index, 1);
+            
+            // Sauvegarder dans le localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Mettre à jour l'affichage
+            renderCart();
+        }
+    }
+    
+    // Fonction pour supprimer un produit de la liste de souhaits
+    function removeFromWishlist(productId) {
+        const index = wishlist.findIndex(item => item.id === productId);
+        
+        if (index !== -1) {
+            wishlist.splice(index, 1);
+            
+            // Sauvegarder dans le localStorage
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            
+            // Mettre à jour l'affichage
+            renderWishlist();
+            
+            // Mettre à jour l'état du bouton de favoris sur la page principale
+            const favoriteBtn = document.querySelector(`.product-card[data-id="${productId}"] .favorite-btn`);
+            if (favoriteBtn) {
+                favoriteBtn.classList.remove('active');
+                favoriteBtn.querySelector('i').style.color = '';
+            }
+        }
+    }
+    
+    // Fonction pour formater les prix
+    function formatPrice(price) {
+        return (price / 1000).toFixed(3);
+    }
+    
+    // Fonction pour filtrer les produits par catégorie
+    function filterProducts(category) {
+        productCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            // Si la catégorie est "all" ou si la carte correspond à la catégorie sélectionnée
+            if (category === 'all' || cardCategory === category) {
+                card.classList.remove('hidden');
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 10);
+            } else {
+                card.classList.remove('visible');
+                card.classList.add('hidden');
+            }
+        });
+    }
+    
+    // Gestion des liens de catégories
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Supprimer la classe active de tous les liens
+            categoryLinks.forEach(l => l.classList.remove('active'));
+            
+            // Ajouter la classe active au lien cliqué
+            this.classList.add('active');
+            
+            // Récupérer la catégorie sélectionnée
+            const category = this.getAttribute('data-category');
+            
+            // Filtrer les produits
+            filterProducts(category);
+        });
+    });
+    
+    // Initialiser l'affichage avec tous les produits visibles
+    productCards.forEach(card => {
+        card.classList.add('visible');
+    });
+    
+    // Initialiser l'état des boutons de favoris
+    wishlist.forEach(item => {
+        const favoriteBtn = document.querySelector(`.product-card[data-id="${item.id}"] .favorite-btn`);
+        if (favoriteBtn) {
+            favoriteBtn.classList.add('active');
+            favoriteBtn.querySelector('i').style.color = 'var(--color-heart)';
+        }
+    });
+    
+    // Ajouter un écouteur d'événement pour le bouton de paiement
+    const checkoutBtn = document.querySelector('.btn-checkout');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', function() {
+            alert('Redirection vers la page de paiement...');
+        });
+    }
+});
+</script>
+</body>
+</html>

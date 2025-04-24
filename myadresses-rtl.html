@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميلاغرو - عناويني</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-icons">
+                    <a href="./account.html"><img src="./img/account.svg" alt="الحساب"></a>
+                    <a href="#"><img src="./img/cart.svg" alt="سلة التسوق"></a>
+                    <a href="#"><img src="./img/Group 9.svg" alt="بحث"></a>
+                    <a href="./shop"><img src="./img/heart-1.png" alt="المفضلة"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="./contact">اتصل بنا</a>
+                    <a href="./new-arrivals">وصل حديثاً</a>
+                    <a href="./shop">تسوق</a>
+                    <a href="./index.html">الرئيسية</a>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="شعار ميلاغرو">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="profile-header">
+        <h1>ملفي الشخصي</h1>
+    </div>
+
+    <div class="profile-content">
+        <div class="content">
+            <div class="address-list">
+                <div class="address-card">
+                    <div class="address-header">
+                        <span>شرق - الكويت</span>
+                        <img src="./img/address-icon.png" alt="رمز العنوان" class="address-icon">
+                    </div>
+                    <div class="address-details">
+                        قطعة: 3، شارع رقم: 502، مبنى رقم: 59
+                    </div>
+                    <div class="address-actions">
+                        <img src="./img/delete-icon.png" alt="حذف" class="action-icon delete-icon">
+                        <img src="./img/edit-icon.png" alt="تعديل" class="action-icon edit-icon">
+                    </div>
+                </div>
+                <div class="address-card">
+                    <div class="address-header">
+                        <span>الشامية - الكويت</span>
+                        <img src="./img/address-icon.png" alt="رمز العنوان" class="address-icon">
+                    </div>
+                    <div class="address-details">
+                        قطعة: 6، شارع رقم: 502، مبنى رقم: 59
+                    </div>
+                    <div class="address-actions">
+                        <img src="./img/delete-icon.png" alt="حذف" class="action-icon delete-icon">
+                        <img src="./img/edit-icon.png" alt="تعديل" class="action-icon edit-icon">
+                    </div>
+                </div>
+                <div class="address-card">
+                    <div class="address-header">
+                        <span>الشامية - الكويت</span>
+                        <img src="./img/address-icon.png" alt="رمز العنوان" class="address-icon">
+                    </div>
+                    <div class="address-details">
+                        قطعة: 6، شارع رقم: 502، مبنى رقم: 59
+                    </div>
+                    <div class="address-actions">
+                        <img src="./img/delete-icon.png" alt="حذف" class="action-icon delete-icon">
+                        <img src="./img/edit-icon.png" alt="تعديل" class="action-icon edit-icon">
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-address-btn" id="openModalBtn">إضافة عنوان جديد</button>
+        </div>
+        
+        <div class="sidebar">
+            <ul>
+                <li><a href="./logout.html">تسجيل الخروج</a></li>
+                <li><a href="./orders/order.html">طلباتي</a></li>
+                <li><a href="./myadresses.html" class="active">عناويني</a></li>
+                <li><a href="./myinformations.html">معلوماتي</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal - Add New Address -->
+    <div class="modal-overlay" id="addressModal" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <img src="./img/close.jpg" alt="إغلاق" class="close-btn" id="closeModalBtn" />
+                <div class="modal-title">إضافة عنوان جديد</div>
+            </div>
+
+            <form action="./update.html" method="post">
+                <div class="form-group">
+                    <label class="form-label">المحافظة</label>
+                    <div class="select-wrapper">
+                        <select class="form-select" name="governorate">
+                            <option>اختر محافظة</option>
+                            <option>العاصمة</option>
+                            <option>حولي</option>
+                            <option>الأحمدي</option>
+                            <option>الفروانية</option>
+                            <option>مبارك الكبير</option>
+                            <option>الجهراء</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">المنطقة</label>
+                    <div class="select-wrapper">
+                        <select class="form-select" name="area">
+                            <option>اختر منطقة</option>
+                            <option>الشامية</option>
+                            <option>شرق</option>
+                            <option>مدينة الكويت</option>
+                            <option>دسمان</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">قطعة</label>
+                    <input type="text" class="form-control" name="block">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">الشارع</label>
+                    <input type="text" class="form-control" name="street">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">رقم المبنى</label>
+                    <input type="text" class="form-control" name="building_number">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">تعليمات خاصة</label>
+                    <input type="text" class="form-control" name="special_directions">
+                </div>
+
+                <button type="submit" class="submit-btn">إضافة عنوان جديد</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-heading">تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="واتساب"><img src="./img/whatsapp-icon.png" alt="واتساب" class="social-icon"></a>
+                    <a href="#" aria-label="تويتر"><img src="./img/twitter-icon.png" alt="تويتر" class="social-icon"></a>
+                    <a href="#" aria-label="انستغرام"><img src="./img/instagram-icon.png" alt="انستغرام" class="social-icon"></a>
+                    <a href="#" aria-label="فيسبوك"><img src="./img/facebook-icon.png" alt="فيسبوك" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">عنواننا</h3>
+                <div>
+                    مجمع الغوالي |<br>
+                    مجمع ديفون، العاصمة،<br>
+                    مدينة الكويت، الكويت
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">اتصل بنا</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">روابط</h3>
+                <div class="footer-links">
+                    <a href="./new-arrivals">وصل حديثاً</a>
+                    <a href="./contact">اتصل بنا</a>
+                    <a href="./shop">تسوق</a>
+                    <a href="./index.html">الرئيسية</a>
+                </div>
+            </div>
+            <div class="footer-section logo-section">
+                <div class="brand-name">ميلاغرو</div>
+                <img src="./img/logo.svg" alt="شعار ميلاغرو" class="logo">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Script to handle modal open/close
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('addressModal');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        // Open modal
+        openBtn.addEventListener('click', function() {
+            modal.style.display = 'flex';
+        });
+
+        // Close modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
