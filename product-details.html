@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagro - Product Details</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="MILAGRO Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="./wishlist.html" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="./cart.html" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="product-details-main">
+        <div class="shop-container">
+            <div class="product-details">
+                <div class="product-details-image">
+                    <img id="productImage" src="" alt="Product Image">
+                </div>
+                <div class="product-details-info">
+                    <h1 id="productTitle">Product Title</h1>
+                    <div class="product-details-price" id="productPrice">0.000 KD</div>
+                    <p id="productDescription">Product description goes here.</p>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="giftCard">Gift Card</label>
+                            <select id="giftCard">
+                                <option value="3000">3,000 KD</option>
+                                <option value="1000">1,000 KD</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label for="logo">Logo Addition</label>
+                            <select id="logo">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-quantity">
+                        <label for="quantity">Quantity</label>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <input type="text" id="quantity" value="1" readonly>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    <button class="shop-btn shop-btn-add-cart" id="addToCartBtn">ADD TO BAG</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
+                <div class="brand-name">MILAGRO</div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">LINKS</h3>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">OUR ADDRESS</h3>
+                <div class="adresses">
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">FOLLOW US</h3>
+                <div class="social-icons">
+                    <div class="group-23">
+                        <img class="vector-3" src="./img/vector.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./shop.js"></script>
+</body>
+</html>

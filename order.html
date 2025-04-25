@@ -1,66 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
- <link rel="stylesheet" href="./style.css">
-
+    <title>Milagro - My Orders</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./order.css">
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="logo">
-                <img src="../../../../public/img/logo.svg" alt="MILAGRO Logo">
-            </div>
-            <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./shop/">Shop</a>
-                <a href="/new-arrivals">New arrivals</a>
-                <a href="./contact">Contacts</a>
-            </div>
-            <div class="nav-icons">
-               <a href="#"> <img src="../../../public/img/heart-1.png" alt="Wishlist"></a>
-               <a href="#"> <img src="../../../public/img/Group 9.svg" alt="Search"></a>
-                <a href="#"><img src="../../../public/img/cart.svg" alt="Cart"></a>
-                <a href="../account/account.html"><img src="../../../public/img/account.svg" alt="Account"></a>
-            </div>
-        </nav>
+    <header>
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="MILAGRO Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="#" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-<div class="container">
-    <!-- Navigation Bar -->
     <div class="profile-header">
-        <h1>Mon Profil</h1>
+        <h1>My Profile</h1>
     </div>
-    
-    <div class="breadcrumb">
-        <a href="/profile/orders">My orders</a>
-    </div>
-    
+
     <div class="profile-content">
         <div class="sidebar">
             <ul>
-                <li><a href="./myinformations.html">My Informations</a></li>
-                <li><a href="./myadresses.html">My adresses</a></li>
-                <li><a href="./order.html" class="active">My orders</a></li>
-                <li><a href="/account/logout">Logo out</a></li>
+                <li><a href="./myinformations.html">My Information</a></li>
+                <li><a href="./myadresses.html">My Addresses</a></li>
+                <li><a href="./order.html" class="active">My Orders</a></li>
+                <li><a href="/account/logout">Log Out</a></li>
             </ul>
         </div>
-        <div class="main-content">
-            <div class="order-empty">
-                <img src="../../../../public/img/shopping-list_1-removebg-preview.png" alt="Commandes vides">
-                <p>Your Order list is empty </p>
+        <div class="main-content profile-main">
+            <div class="order-list">
+                <!-- Order 1: #CTH-198203 -->
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-id-container">
+                            <img src="./img/cart.svg" alt="Cart Icon" class="order-cart-icon">
+                            <span class="order-id">#CTH-198203</span>
+                        </div>
+                        <span class="order-status">Complete</span>
+                    </div>
+                    <div class="order-products">
+                        <!-- Product 1: Luxury Macaron Box -->
+                        <div class="order-product">
+                            <div class="order-product-image">
+                                <img src="./img/Group 170.png" alt="Luxury Macaron Box">
+                            </div>
+                            <div class="order-product-details">
+                                <h3 class="order-product-title">Luxury Macaron Box</h3>
+                                <p class="order-product-specs">38 pcs</p>
+                                <p class="order-product-quantity">Quantity: 1</p>
+                                <p class="order-product-price">27.000 KD</p>
+                            </div>
+                        </div>
+                        <div class="product-separator"></div>
+                        <!-- Product 2: Milagro Diffuser -->
+                        <div class="order-product">
+                            <div class="order-product-image">
+                                <img src="./img/Group 169.png" alt="Milagro Diffuser">
+                            </div>
+                            <div class="order-product-details">
+                                <h3 class="order-product-title">Milagro Diffuser</h3>
+                                <p class="order-product-specs">30 pcs</p>
+                                <p class="order-product-quantity">Quantity: 1</p>
+                                <p class="order-product-price">13.000 KD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <span class="order-total">Total: 38.000 KD</span>
+                        <a href="./order-details.html" class="details-link">Details</a>
+                    </div>
+                </div>
+                <!-- Order 2: #CTH-671892 -->
+                
+                </div>
             </div>
         </div>
     </div>
-</div>
-<footer>
+
+    <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
                 <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
@@ -69,9 +104,9 @@
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="./shop">Shop</a>
-                    <a href="./contact">Contact</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="./contact.html">Contact</a>
                     <a href="./new-arrivals">New Arrivals</a>
                 </div>
             </div>
@@ -84,7 +119,7 @@
             </div>
             <div class="footer-section">
                 <h3 class="footer-heading">OUR ADDRESS</h3>
-                <div>
+                <div class="adresses">
                     Al-Ghawali Complex |<br>
                     Devon Complex, Capital,<br>
                     Kuwait City, Kuwait

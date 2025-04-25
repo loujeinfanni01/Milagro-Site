@@ -1,130 +1,115 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation - Milagro</title>
+    <title>Checkout - Confirmation - Milagro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="navbar">
+            <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="https://via.placeholder.com/100x100/212A1E/B99D83?text=M" alt="Milagro Logo">
-                    </a>
+                    <img src="./img/logo.svg" alt="MILAGRO Logo">
                 </div>
                 <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="new-arrivals.html">New arrivals</a>
-                    <a href="contacts.html">Contacts</a>
+                    <a href="/">Home</a>
+                    <a href="/shop">Shop</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
                 </div>
                 <div class="nav-icons">
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=S" alt="Search"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=W" alt="Wishlist"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=C" alt="Cart"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=U" alt="User"></a>
+                    <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="#" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="#" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="checkout-container">
-        <h1 class="checkout-title">Checkout <span class="asterisk">★</span></h1>
-        
-        <div class="checkout-breadcrumb">
-            <a href="cart.html">Shopping Cart</a>
-            <span>/</span>
-            <a href="checkout.html">Delivery</a>
-            <span>/</span>
-            <a href="payment.html">Payment</a>
-            <span>/</span>
-            <span>Confirmation</span>
-        </div>
-        
-        <div class="checkout-progress">
-            <div class="progress-line"></div>
-            <div class="progress-step completed">1</div>
-            <div class="progress-step completed">2</div>
-            <div class="progress-step active">3</div>
-        </div>
-        
-        <div class="checkout-content">
-            <div class="checkout-form">
-                <div class="thank-you-message">
-                    <h2 class="thank-you-title">Thank you for your order! <span class="asterisk">★</span></h2>
+    <!-- Checkout Section (Confirmation Step) -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="checkout-title">Checkout <span class="star">★</span></h1>
+            <nav class="checkout-breadcrumb">
+                <a href="#" class="breadcrumb-back">
+                    <span class="back-arrow">←</span> Shopping Cart / Delivery / Payment / Confirmation
+                </a>
+            </nav>
+            <div class="checkout-progress">
+                <div class="progress-line"></div>
+                <div class="progress-step completed">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Delivery</span>
                 </div>
-                
-                <div class="product-item">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/80x80/B99D83/FFFFFF?text=Macaron" alt="Luxury Macaron Box">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-name">Luxury Macaron Box</h3>
-                        <div class="product-info">
-                            <p>30 KD</p>
-                            <p>Quantity: 1</p>
+                <div class="progress-step completed">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="progress-step active">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Confirmation</span>
+                </div>
+            </div>
+            <div class="checkout-content">
+                <div class="confirmation-section">
+                    <h2 class="thank-you-title">Thank you for your order! <span class="star">★</span></h2>
+                    <a href="/" class="home-btn">Home Page</a>
+                    <p class="order-confirmation">We have sent you an email regarding the order <span class="order-number">#198203</span></p>
+                </div>
+                <div class="checkout-summary">
+                    <h2 class="form-section-title">Your Order</h2>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./img/mask-group.png" alt="Luxury Macaron Box">
                         </div>
-                        <p class="product-price">27.000 KD</p>
-                        <div class="confirmation-label">Confirmation</div>
-                    </div>
-                </div>
-                
-                <div class="product-item">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/80x80/B99D83/FFFFFF?text=Diffuser" alt="Milagro Diffuser">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-name">Milagro Diffuser</h3>
-                        <div class="product-info">
-                            <p>40 KD</p>
-                            <p>Quantity: 1</p>
+                        <div class="product-details">
+                            <h3 class="product-name">Luxury Macaron Box</h3>
+                            <p class="product-info">38 pcs</p>
+                            <p class="product-info">Quantity: 1</p>
+                            <p class="product-price">27.000 KD</p>
                         </div>
-                        <p class="product-price">14.000 KD</p>
-                        <div class="confirmation-label">Confirmation</div>
                     </div>
-                </div>
-                
-                <div class="checkout-total">
-                    <div class="total-label">Total:</div>
-                    <div class="total-amount">41.000 KD</div>
-                </div>
-                
-                <div class="order-email">
-                    We have sent you an email regarding your order. <span class="order-number">#199203</span>
-                </div>
-                
-                <div class="order-confirmation">
-                    <a href="index.html" class="home-btn">HOME PAGE</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Milagro Diffuser">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name">Milagro Diffuser</h3>
+                            <p class="product-info">30 pcs</p>
+                            <p class="product-info">Quantity: 1</p>
+                            <p class="product-price">13.000 KD</p>
+                        </div>
+                    </div>
+                    <div class="checkout-total">
+                        <span class="total-label">Total:</span>
+                        <span class="total-amount">41.000 KD</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
-                <img src="https://via.placeholder.com/100x100/212A1E/B99D83?text=M" alt="Milagro Logo" class="logo">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
                 <div class="brand-name">MILAGRO</div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="new-arrivals.html">New Arrivals</a>
+                    <a href="/">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">CONTACT US</h3>
                 <div class="contact-info">
@@ -132,23 +117,20 @@
                     <div>info@milagro.com</div>
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">OUR ADDRESS</h3>
-                <div class="contact-info">
-                    <div>Al-Ghawali Complex |</div>
-                    <div>Devon Complex, Capital,</div>
-                    <div>Kuwait City, Kuwait</div>
+                <div>
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">FOLLOW US</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <div class="group-23">
+                        <img class="vector-3" src="./img/vector.svg">
+                    </div>
                 </div>
             </div>
         </div>

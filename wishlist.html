@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagro - Verify OTP</title>
+    <title>Milagro - Wishlist</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -17,36 +19,30 @@
                 <div class="nav-links">
                     <a href="./index.html">Home</a>
                     <a href="./shop.html">Shop</a>
-                    <a href="./new-arrivals">New Arrivals</a>
-                    <a href="./contact">Contact</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
                 </div>
                 <div class="nav-icons">
-                    <a href="./shop"><img src="./img/heart-1.png" alt="Wishlist"></a>
-                    <a href="#"><img src="./img/Group 9.svg" alt="Search"></a>
-                    <a href="#"><img src="./img/cart.svg" alt="Cart"></a>
-                    <a href="./welcome.html"><img src="./img/account.svg" alt="Account"></a>
+                    <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="./wishlist.html" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="main-content" id="verify-otp-page">
-        <h1 class="welcome-heading">Verify OTP<span class="asterisk">*</span></h1>
-        <p class="welcome-text">Enter code sent to your number</p>
-        <p class="welcome-text">We sent it to the number +965 ********</p>
-        <div class="form-container">
-            <form id="otp-form" action="verify-otp-step2.html">
-                <div class="form-group">
-                    <label for="otp">Enter OTP</label>
-                    <input type="text" id="otp" name="otp" placeholder="" required>
-                    <p class="otp-message">Didn’t receive OTP? !00:10</p>
-                </div>
-                <button type="submit" class="btn">Verify</button>
-                <a href="#" class="resend-link">Resend OTP</a>
-            </form>
+    <!-- Main Content -->
+    <main class="shop-main-content">
+        <div class="shop-container">
+            <!-- Wishlist Grid -->
+            <section class="shop-wishlist-grid">
+                <!-- Wishlist items will be dynamically added here -->
+            </section>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
@@ -56,8 +52,8 @@
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="./index.html">Home</a>
-                    <a href="./shop">Shop</a>
+                    <a href="/">Home</a>
+                    <a href="./shop.html">Shop</a>
                     <a href="./contact">Contact</a>
                     <a href="./new-arrivals">New Arrivals</a>
                 </div>
@@ -71,7 +67,7 @@
             </div>
             <div class="footer-section">
                 <h3 class="footer-heading">OUR ADDRESS</h3>
-                <div>
+                <div class="adresses">
                     Al-Ghawali Complex |<br>
                     Devon Complex, Capital,<br>
                     Kuwait City, Kuwait
@@ -88,11 +84,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('otp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = 'verify-otp-step2.html';
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="./shop.js"></script>
 </body>
 </html>

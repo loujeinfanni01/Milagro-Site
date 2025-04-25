@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagro Diffuser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #212A1E;
+            --gold: #B99D83;
+            --light-gold: #C8AA77;
+            --cream: #E5DED3;
+            --white: #FFFFFF;
+            --black: #000000;
+            --pink-bg: #F8E7E9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Philosopher', sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-green);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header and Navigation */
+        header {
+            width: 100%;
+            background-color: var(--dark-green);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(185, 157, 131, 0.2);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-icons img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            margin: 30px 0;
+            font-size: 14px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+        }
+        
+        .breadcrumb span {
+            margin: 0 5px;
+            color: var(--white);
+            opacity: 0.7;
+        }
+        
+        .arrow-left {
+            margin-right: 10px;
+        }
+        
+        /* Product Section */
+        .product-section {
+            padding: 20px 0;
+        }
+        
+        .product-container {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        
+        /* Product Gallery */
+        .product-gallery {
+            display: flex;
+            gap: 15px;
+            width: 50%;
+        }
+        
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            width: 100px;
+            height: 110px;
+            cursor: pointer;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .thumbnail.active {
+            border-color: var(--gold);
+        }
+        
+        .thumbnail:hover {
+            opacity: 1;
+        }
+        
+        .main-image {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border: 3px solid var(--gold);
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .favorite-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .favorite-btn img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Product Details */
+        .product-details {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .product-title {
+            font-size: 28px;
+            color: var(--white);
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        
+        .product-price {
+            font-size: 16px;
+            color: var(--gold);
+            font-weight: bold;
+            margin-top: -10px;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .stars {
+            color: var(--gold);
+        }
+        
+        .rating-text {
+            color: var(--white);
+            font-size: 14px;
+        }
+        
+        .product-description {
+            color: var(--white);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .product-additions {
+            margin-top: 10px;
+        }
+        
+        .additions-title {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .addition-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .addition-option input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            appearance: none;
+            border: 1px solid var(--white);
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .addition-option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--white);
+        }
+        
+        .addition-label {
+            color: var(--white);
+            font-size: 14px;
+        }
+        
+        .addition-price {
+            margin-left: auto;
+            color: var(--white);
+        }
+        
+        .product-quantity {
+            margin-top: 15px;
+        }
+        
+        .quantity-title {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            max-width: 100px;
+        }
+        
+        .quantity-btn {
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .quantity-input {
+            width: 40px;
+            height: 25px;
+            text-align: center;
+            border: 1px solid var(--white);
+            border-left: none;
+            border-right: none;
+            background-color: transparent;
+            color: var(--white);
+            font-size: 14px;
+        }
+        
+        .add-to-bag-btn {
+            background-color: var(--gold);
+            color: var(--dark-green);
+            border: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .add-to-bag-btn:hover {
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(185, 157, 131, 0.2);
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 160px;
+        }
+        
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .brand-name {
+            font-size: 20px;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-heading {
+            font-size: 14px;
+            color: var(--white);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .contact-info {
+            color: var(--white);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        
+        .addresses {
+            color: var(--white);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Chat bubble */
+       
+        .chat-bubble img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .product-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .product-gallery {
+                width: 100%;
+            }
+            
+            .product-details {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-gallery {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            
+            .thumbnails {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            
+            .main-image {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .thumbnail {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .product-title {
+                font-size: 22px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="/api/placeholder/40/40" alt="MILAGRO Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#" class="icon-link"><img src="/api/placeholder/20/20" alt="Search"></a>
+                    <a href="#" class="icon-link" id="wishlistIcon"><img src="/api/placeholder/20/20" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="/api/placeholder/20/20" alt="Cart"></a>
+                    <a href="./welcome.html" class="icon-link"><img src="/api/placeholder/20/20" alt="Account"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <span class="arrow-left">←</span>
+            <a href="./shop.html">Shop</a>
+            <span>/</span>
+            <a href="./shop.html">Boxes</a>
+            <span>/</span>
+            <span>Milagro Diffuser</span>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-section">
+            <div class="product-container">
+                <!-- Product Image Gallery -->
+                <div class="product-gallery">
+                    <div class="thumbnails">
+                        <img src="./img/cho2.png" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="./img/cho2.png" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="./img/cho2.png" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                    <div class="main-image">
+                        <img src="./img/cho2.png" alt="Milagro Diffuser" id="mainImage">
+                        <button class="favorite-btn">
+                            <img src="./img/cho2.png" alt="Favorite">
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Details -->
+                <div class="product-details">
+                    <h1 class="product-title">Milagro Diffuser</h1>
+                    <p class="product-price">13.000 KD</p>
+                    
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">4.8 | 23 reviews</span>
+                    </div>
+                    
+                    <p class="product-description">
+                        Milagro magna aliquia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    
+                    <div class="product-additions">
+                        <h3 class="additions-title">Additions:</h3>
+                        <div class="addition-option">
+                            <input type="radio" id="logo-addition" name="addition">
+                            <label for="logo-addition" class="addition-label">Logo Addition</label>
+                            <span class="addition-price">3.000 KD</span>
+                        </div>
+                        <div class="addition-option">
+                            <input type="radio" id="gift-card" name="addition">
+                            <label for="gift-card" class="addition-label">Gift Card</label>
+                            <span class="addition-price">1.000 KD</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-quantity">
+                        <p class="quantity-title">Quantity:</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrement">-</button>
+                            <input type="text" class="quantity-input" value="1" readonly>
+                            <button class="quantity-btn increment">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-bag-btn">ADD TO BAG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="/api/placeholder/40/40" alt="Milagro Logo" class="footer-logo">
+                <div class="brand-name">MILAGRO</div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">LINKS</h3>
+                <div class="footer-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="./contact.html">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="contact-info">
+                    <div>+965 99982794</div>
+                    <div>info@milagro.com</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">OUR ADDRESS</h3>
+                <div class="addresses">
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">FOLLOW US</h3>
+                <div class="social-icons">
+                    <img src="/api/placeholder/20/20" alt="Facebook" class="social-icon">
+                    <img src="/api/placeholder/20/20" alt="Instagram" class="social-icon">
+                    <img src="/api/placeholder/20/20" alt="Twitter" class="social-icon">
+                    <img src="/api/placeholder/20/20" alt="Pinterest" class="social-icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(thumbnail) {
+            // Remove active class from all thumbnails
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            // Add active class to clicked thumbnail
+            thumbnail.classList.add('active');
+            // Update main image source
+            document.getElementById('mainImage').src = thumbnail.src;
+        }
+        
+        // Quantity control
+        document.querySelector('.decrement').addEventListener('click', function() {
+            const input = document.querySelector('.quantity-input');
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
+        });
+        
+        document.querySelector('.increment').addEventListener('click', function() {
+            const input = document.querySelector('.quantity-input');
+            let value = parseInt(input.value);
+            input.value = value + 1;
+        });
+    </script>
+</body>
+</html>

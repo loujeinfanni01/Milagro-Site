@@ -1,193 +1,192 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Milagro</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="navbar">
+            <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="https://via.placeholder.com/100x100/212A1E/B99D83?text=M" alt="Milagro Logo">
-                    </a>
+                    <img src="./img/logo.svg" alt="MILAGRO Logo">
                 </div>
                 <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="new-arrivals.html">New arrivals</a>
-                    <a href="contacts.html">Contacts</a>
+                    <a href="/">Home</a>
+                    <a href="/shop">Shop</a>
+                    <a href="/new-arrivals">New arrivals</a>
+                    <a href="/contact">Contacts</a>
                 </div>
                 <div class="nav-icons">
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=S" alt="Search"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=W" alt="Wishlist"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=C" alt="Cart"></a>
-                    <a href="#"><img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=U" alt="User"></a>
+                    <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
+                    <a href="#" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
+                    <a href="#" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="checkout-container">
-        <h1 class="checkout-title">Checkout <span class="asterisk">★</span></h1>
-        
-        <div class="checkout-breadcrumb">
-            <a href="cart.html">Shopping Cart</a>
-            <span>/</span>
-            <span>Delivery</span>
-        </div>
-        
-        <div class="checkout-progress">
-            <div class="progress-line"></div>
-            <div class="progress-step active">1</div>
-            <div class="progress-step">2</div>
-            <div class="progress-step">3</div>
-        </div>
-        
-        <div class="checkout-content">
-            <div class="checkout-form">
-                <div class="form-section">
-                    <h2 class="form-section-title">Contact Information</h2>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" placeholder="First name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Last name">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" placeholder="Email address">
-                        </div>
-                        <div class="form-group phone-input">
-                            <div class="phone-prefix">+965</div>
-                            <input type="tel" class="phone-number" placeholder="Phone number">
-                        </div>
-                    </div>
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="checkout-title">Checkout <span class="star">★</span></h1>
+            <nav class="checkout-breadcrumb">
+                <a href="#" class="breadcrumb-back">
+                    <span class="back-arrow">←</span> Shopping Cart / Delivery
+                </a>
+            </nav>
+            <div class="checkout-progress">
+                <div class="progress-line"></div>
+                <div class="progress-step completed">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Delivery</span>
                 </div>
-                
-                <div class="form-section">
-                    <h2 class="form-section-title">Delivery Information</h2>
-                    <div class="form-group">
-                        <select>
-                            <option value="" disabled selected>Governorate</option>
-                            <option value="ahmadi">Ahmadi</option>
-                            <option value="hawally">Hawally</option>
-                            <option value="farwaniya">Farwaniya</option>
-                            <option value="kuwait-city">Kuwait City</option>
-                            <option value="bayan">Bayan</option>
-                            <option value="jabriya">Jabriya</option>
-                            <option value="salmiya">Salmiya</option>
-                            <option value="zahra">Zahra</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select>
-                            <option value="" disabled selected>Area</option>
-                            <option value="area1">Area 1</option>
-                            <option value="area2">Area 2</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" placeholder="Block">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="St. Name">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" placeholder="Building Number">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Special Directions">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group date-input">
-                            <input type="text" placeholder="Delivery Date">
-                            <img src="https://via.placeholder.com/20x20/B99D83/FFFFFF?text=C" alt="Calendar" class="date-icon">
-                        </div>
-                        <div class="form-group time-select">
-                            <select>
-                                <option value="" disabled selected>Delivery Time</option>
-                                <option value="2-4">2:00PM - 4:00PM</option>
-                                <option value="4-6">4:00PM - 6:00PM</option>
-                                <option value="6-8">6:00PM - 8:00PM</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="progress-step">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Payment</span>
                 </div>
-                
-                <button class="proceed-btn">PROCEED TO PAYMENT</button>
-            </div>
-            
-            <div class="checkout-summary">
-                <h2 class="form-section-title">Your Order</h2>
-                
-                <div class="product-item">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/80x80/B99D83/FFFFFF?text=Macaron" alt="Luxury Macaron Box">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-name">Luxury Macaron Box</h3>
-                        <div class="product-info">
-                            <p>30 KD</p>
-                            <p>Quantity: 1</p>
-                        </div>
-                        <p class="product-price">27.000 KD</p>
-                    </div>
-                </div>
-                
-                <div class="product-item">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/80x80/B99D83/FFFFFF?text=Diffuser" alt="Milagro Diffuser">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-name">Milagro Diffuser</h3>
-                        <div class="product-info">
-                            <p>40 KD</p>
-                            <p>Quantity: 1</p>
-                        </div>
-                        <p class="product-price">14.000 KD</p>
-                    </div>
-                </div>
-                
-                <div class="checkout-total">
-                    <div class="total-label">Total:</div>
-                    <div class="total-amount">41.000 KD</div>
+                <div class="progress-step">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Confirmation</span>
                 </div>
             </div>
+            <div class="checkout-content">
+                <div class="checkout-form">
+                    <div class="form-section">
+                        <h2 class="form-section-title">Contact Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" placeholder="Email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <div class="phone-input">
+                                <span class="phone-prefix">+965</span>
+                                <input type="tel" id="phone" placeholder="Phone number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h2 class="form-section-title">Delivery Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="governorate">Governorate</label>
+                                <select id="governorate">
+                                    <option value="">Select Governorate</option>
+                                    <option value="capital">Capital</option>
+                                    <option value="hawalli">Hawalli</option>
+                                    <option value="farwaniya">Farwaniya</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Area</label>
+                                <select id="area">
+                                    <option value="">Select Area</option>
+                                    <option value="area1">Area 1</option>
+                                    <option value="area2">Area 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="street">St. Name</label>
+                                <input type="text" id="street" placeholder="St. Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="building">Building</label>
+                                <input type="text" id="building" placeholder="Building">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="block">Block</label>
+                                <input type="text" id="block" placeholder="Block">
+                            </div>
+                            <div class="form-group">
+                                <label for="directions">Special Directions</label>
+                                <input type="text" id="directions" placeholder="Special Directions">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="delivery-date">Delivery Date</label>
+                                <input type="date" id="delivery-date" placeholder="Delivery Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-time">Delivery Time</label>
+                                <select id="delivery-time">
+                                    <option value="">Select Time</option>
+                                    <option value="morning">Morning</option>
+                                    <option value="afternoon">Afternoon</option>
+                                    <option value="evening">Evening</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="proceed-btn">Proceed to Payment</button>
+                </div>
+                <div class="checkout-summary">
+                    <h2 class="form-section-title">Your Order</h2>
+                    <div class="product-item-2">
+                        <div class="product-image">
+                            <img src="./img/mask-group.png" alt="Luxury Macaron Box">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name">Luxury Macaron Box</h3>
+                            <p class="product-info">38 pcs</p>
+                            <p class="product-price">27.000 KD</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Milagro Diffuser">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name">Milagro Diffuser</h3>
+                            <p class="product-info">30 pcs</p>
+                            <p class="product-price">13.000 KD</p>
+                        </div>
+                    </div>
+                    <div class="checkout-total">
+                        <span class="total-label">Total</span>
+                        <span class="total-amount">41.000 KD</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
-                <img src="https://via.placeholder.com/100x100/212A1E/B99D83?text=M" alt="Milagro Logo" class="logo">
+                <img src="./img/logo.svg" alt="Milagro Logo" class="logo">
                 <div class="brand-name">MILAGRO</div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="shop.html">Shop</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="new-arrivals.html">New Arrivals</a>
+                    <a href="/">Home</a>
+                    <a href="./shop">Shop</a>
+                    <a href="./contact">Contact</a>
+                    <a href="./new-arrivals">New Arrivals</a>
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">CONTACT US</h3>
                 <div class="contact-info">
@@ -195,23 +194,20 @@
                     <div>info@milagro.com</div>
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">OUR ADDRESS</h3>
-                <div class="contact-info">
-                    <div>Al-Ghawali Complex |</div>
-                    <div>Devon Complex, Capital,</div>
-                    <div>Kuwait City, Kuwait</div>
+                <div>
+                    Al-Ghawali Complex |<br>
+                    Devon Complex, Capital,<br>
+                    Kuwait City, Kuwait
                 </div>
             </div>
-            
             <div class="footer-section">
                 <h3 class="footer-heading">FOLLOW US</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <div class="group-23">
+                        <img class="vector-3" src="./img/vector.svg">
+                    </div>
                 </div>
             </div>
         </div>

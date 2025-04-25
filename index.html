@@ -22,7 +22,7 @@
                 <!-- Example Cart Item -->
                 <div class="cart-item">
                     <div class="cart-item-image">
-                        <img src="./img/mask-group.png" alt="Luxury Macaron Box">
+                        <img src="img/1-0000-layer-4-2.png" alt="Luxury Macaron Box">
                     </div>
                     <div class="cart-item-details">
                         <h3 class="cart-item-title">Luxury Macaron Box</h3>
@@ -40,7 +40,7 @@
                 <!-- Example Cart Item -->
                 <div class="cart-item">
                     <div class="cart-item-image">
-                        <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Milagro Diffuser">
+                        <img src=".//img/1-0000-layer-4.png" alt="Milagro Diffuser">
                     </div>
                     <div class="cart-item-details">
                         <h3 class="cart-item-title">Milagro Diffuser</h3>
@@ -87,7 +87,7 @@
             </div>
             <div class="nav-links">
                 <a href="/">Home</a>
-                <a href="/shop">Shop</a>
+                <a href="./shop.html">Shop</a>
                 <a href="/new-arrivals">New arrivals</a>
                 <a href="/contact">Contacts</a>
             </div>
@@ -96,13 +96,61 @@
                 <a href="#" class="icon-link"id="wishlistIcon"> <img src="./img/heart-1.png"  alt="Wishlist"></a>
             
                 <a href="#" class="icon-link"id="cartIcon"><img src="./img/cart.svg" id="cartIcon"  alt="Cart"></a>
-                <a href="#" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
+                <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
             </div>
         </nav>
         
     </div>
 </header>
-
+<!-- Modal Contact Us -->
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-content contact-modal">
+        <div class="modal-header contact-header">
+            <h2>Contact Us</h2>
+            <button class="close-modal">×</button>
+        </div>
+        <div class="modal-body contact-body">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="img/telephone 1.png" alt="Phone Icon" style="margin-right: 10px; width: 16px; height: 16px;">
+                    <span>+965 99982794</span>
+                </div>
+                <div class="contact-item">
+                    <img src="img/mail 1.png" alt="Email Icon" style="margin-right: 10px; width: 16px; height: 16px;">
+                    <span>info@milagro.com</span>
+                </div>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <div class="phone-input">
+                        <div class="phone-prefix">+ 965</div>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
     <section class="hero-section">
         <div class="hero-content">
             <h1 class="brand-name1">MILAGRO</h1>
@@ -114,7 +162,7 @@
                 <div class="slide">
                     <div class="oval-container">
                         <div class="oval-image principal">
-                            <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Chocolats de luxe">
+                            <img src="/img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Chocolats de luxe">
                         </div>
                         <div class="oval-image secondary">
                             <img src="./img/1-0000-layer-4-2.png" alt="Assortiment de chocolats">
@@ -163,107 +211,93 @@
         </div>
     </section>
 
-    <section class="best-sellers-section">
-        <h2 class="section-title">Best Seller</h2>
-        <div class="products-slider-container">
-            <button class="nav-button prev-button">❮</button>
-            <div class="products-slider">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/mask-group-4.png" alt="Blue Giveaway Tray">
+    <section style="padding: 60px 5%; position: relative; background-color: #212A1E;">
+        <h2 style="font-size: 32px; color: #B99D83; margin-bottom: 40px; text-align: left; font-weight: normal; position: relative; display: inline-block;">Best Seller<span style="margin-left: 10px; font-size: 20px;">★</span></h2>
+        <div style="position: relative; overflow: hidden; max-width: 2000px; margin-left: -50px ;margin-right:-50px; padding: 0 0px;">
+            <button id="prev-button" style="position: absolute; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: #B99D83; font-size: 36px; cursor: pointer; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; left: 0; opacity: 1;">❮</button>
+            <div id="products-slider" style="display: flex; gap: 30px; transition: transform 0.5s ease;">
+                <!-- Product 1 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/mask-group-4.png" alt="Blue Giveaway Tray" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Blue Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Blue Giveaway Tray</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/mask-group-2.png" alt="Green Giveaway Tray">
+                <!-- Product 2 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/mask-group-2.png" alt="Green Giveaway Tray" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Green Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Green Giveaway Tray</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/3d7c31c50e67f1a98fee5e3008637e01-1-1.png" alt="Pink Giveaway Tray">
+                <!-- Product 3 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/3d7c31c50e67f1a98fee5e3008637e01-1-1.png" alt="Pink Giveaway Tray" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Pink Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Pink Giveaway Tray</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/mask-group.png" alt="Red Giveaway Tray">
+                <!-- Product 4 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/mask-group.png" alt="Red Giveaway Tray" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Red Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Red Giveaway Tray</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Purple Giveaway Tray">
+                <!-- Product 5 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px;overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/mask-group-4.png" alt="Extra Card 1" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Purple Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Extra Card 1</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./img/mask-group-1.png" alt="Orange Giveaway Tray">
+                <!-- Product 6 -->
+                <div style="min-width: 324px;">
+                    <div style="height: 327px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(185, 157, 131, 0.3); background-color: #212A1E;">
+                        <img src="./img/mask-group-4.png" alt="Extra Card 2" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Orange Giveaway Tray</h3>
-                        <div class="product-details">
+                    <div style="text-align: center; padding: 10px 0;">
+                        <h3 style="font-size: 16px; color: #FFFFFF; margin: 0 0 5px; font-weight: normal;">Extra Card 2</h3>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #B99D83; padding: 0 15px;">
                             <span>30 pieces</span>
-                            <span class="product-price">29.000 KD</span>
+                            <span>29.000 KD</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="nav-button next-button">❯</button>
+            <button id="next-button" style="position: absolute; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: #B99D83; font-size: 36px; cursor: pointer; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; right: 0; opacity: 1;">❯</button>
         </div>
     </section>
-
-    <section class="luxury">
-        <div class="container">
-            <h1 class="product-title">Milagro Diffuser Sticks Chocolate</h1>
-            <div class="product-description">
-                <span class="line"></span>
-                <p>Luxury chocolate for the luxurious occasions. The perfect scent for chocoholics rich and sweet and full of that intense cocoa smell.</p>
-            </div>
-            <div class="product-image-container">
-                <img src="./img/vector-3.svg" class="vector-top">
-                <div class="oval-frame">
-                    <img src="./img/untitled-1-0003-layer-3.png" alt="Milagro Diffuser Sticks Chocolate">
-                    <button class="learn-more-btn">Learn More</button>
-                </div>
-                <img src="./img/vector-2.svg" class="vector-bottom">
-                <img src="./img/star--1--4.png" class="star-1">
-            </div>
-        </div>
-    </section>
-
     <section class="video-section">
         <div class="container">
             <h3>Add a Touch of Luxury to Your Celebrations</h3>
@@ -276,65 +310,65 @@
         </div>
     </section>
 
-    <div class="products-container">
-        <div class="product-item">
-            <div class="product-image">
+    <div class="products-container-main">
+        <div class="product-item-main">
+            <div class="product-image-main">
                 <img src="./img/26c8f0284f058665486a1b780873c7a0-1.png" alt="Mix Coins Box">
             </div>
-            <h3 class="product-name">Mix Coins Box</h3>
-            <div class="product-details">
-                <p class="product-quantity">50 pcs</p>
-                <p class="product-price">19.000 KD</p>
+            <h3 class="product-name-main">Mix Coins Box</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">50 pcs</p>
+                <p class="product-price-main">19.000 KD</p>
             </div>
         </div>
-        <div class="product-item">
-            <div class="product-image">
+        <div class="product-item-main">
+            <div class="product-image-main-main">
                 <img src="./img/mask-group.png" alt="Mix Chocolates (Medium Box)">
             </div>
-            <h3 class="product-name">Mix Chocolates (Medium Box)</h3>
-            <div class="product-details">
-                <p class="product-quantity">25 pcs</p>
-                <p class="product-price">12.000 KD</p>
+            <h3 class="product-name-main">Mix Chocolates (Medium Box)</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">25 pcs</p>
+                <p class="product-price-main">12.000 KD</p>
             </div>
         </div>
-        <div class="product-item">
-            <div class="product-image">
+        <div class="product-item-main">
+            <div class="product-image-main">
                 <img src="./img/0e44c85c95bd23e293342b0753ea1dad-2.png" alt="Mix Chocolates (Large Box)">
             </div>
-            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
-            <div class="product-details">
-                <p class="product-quantity">49 pcs</p>
-                <p class="product-price">19.000 KD</p>
+            <h3 class="product-name-main">Mix Chocolates (Large Box)</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">49 pcs</p>
+                <p class="product-price-main">19.000 KD</p>
             </div>
         </div>
-        <div class="product-item">
-            <div class="product-image">
+        <div class="product-item-main">
+            <div class="product-image-main">
                 <img src="./img/048e6c0ae8f9b15fbad711837c44f479-1.png" alt="Mix Chocolates (Large Box)">
             </div>
-            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
-            <div class="product-details">
-                <p class="product-quantity">49 pcs</p>
-                <p class="product-price">19.000 KD</p>
+            <h3 class="product-name-main">Mix Chocolates (Large Box)</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">49 pcs</p>
+                <p class="product-price-main">19.000 KD</p>
             </div>
         </div>
-        <div class="product-item">
-            <div class="product-image">
+        <div class="product-item-main">
+            <div class="product-image-main">
                 <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Mix Chocolates (Large Box)">
             </div>
-            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
-            <div class="product-details">
-                <p class="product-quantity">49 pcs</p>
-                <p class="product-price">19.000 KD</p>
+            <h3 class="product-name-main">Mix Chocolates (Large Box)</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">49 pcs</p>
+                <p class="product-price-main">19.000 KD</p>
             </div>
         </div>
-        <div class="product-item">
-            <div class="product-image">
+        <div class="product-item-main">
+            <div class="product-image-main">
                 <img src="./img/f2c355a3c60e840045fbce468cd3b47d-1-1.png" alt="Mix Chocolates (Large Box)">
             </div>
-            <h3 class="product-name">Mix Chocolates (Large Box)</h3>
-            <div class="product-details">
-                <p class="product-quantity">49 pcs</p>
-                <p class="product-price">19.000 KD</p>
+            <h3 class="product-name-main">Mix Chocolates (Large Box)</h3>
+            <div class="product-details-main">
+                <p class="product-quantity-main">49 pcs</p>
+                <p class="product-price-main">19.000 KD</p>
             </div>
         </div>
     </div>
@@ -348,9 +382,9 @@
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="./shop">Shop</a>
-                    <a href="./contact">Contact</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="./contact.html">Contact</a>
                     <a href="./new-arrivals">New Arrivals</a>
                 </div>
             </div>
@@ -363,7 +397,7 @@
             </div>
             <div class="footer-section">
                 <h3 class="footer-heading">OUR ADDRESS</h3>
-                <div>
+                <div class="adresses">
                     Al-Ghawali Complex |<br>
                     Devon Complex, Capital,<br>
                     Kuwait City, Kuwait
@@ -780,7 +814,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const productElement = document.createElement('div');
             productElement.className = 'wishlist-item';
             productElement.innerHTML = `
-                <div class="product-image">
+                <div class="product-image-main-main">
                     <img src="${product.image}" alt="${product.name}">
                     <button class="favorite-btn active" data-id="${product.id}">
                         <i class="fas fa-heart"></i>
@@ -1041,6 +1075,57 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Redirection vers la page de paiement...');
         });
     }
+});
+
+const shopNowBtn = document.querySelector('.shop-now-btn');
+if (shopNowBtn) {
+    shopNowBtn.addEventListener('click', function() {
+        window.location.href = './shop.html';
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const contactLink = document.querySelector('a[href="/contact"]');
+    const contactModal = document.getElementById('contactModal');
+    const closeModalBtn = contactModal.querySelector('.close-modal');
+    const contactForm = document.getElementById('contactForm');
+
+    contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        contactModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+        contactModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    contactModal.addEventListener('click', function(e) {
+        if (e.target === contactModal) {
+            contactModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!firstName || !lastName || !phone || !email || !message) {
+            alert('Veuillez remplir tous les champs');
+            return;
+        }
+
+        console.log('Formulaire soumis:', { firstName, lastName, phone, email, message });
+        contactForm.reset();
+        contactModal.classList.remove('active');
+        document.body.style.overflow = '';
+        alert('Merci ! Votre message a été envoyé.');
+    });
 });
 </script>
 </body>

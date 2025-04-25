@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagro - Verify OTP Step 2</title>
+    <title>Milagro - Order Details</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./order.css">
 </head>
 <body>
     <header>
@@ -16,39 +17,69 @@
                     <img src="./img/logo.svg" alt="MILAGRO Logo">
                 </div>
                 <div class="nav-links">
-                    <a href="/">Home</a>
+                    <a href="./index.html">Home</a>
                     <a href="./shop.html">Shop</a>
                     <a href="/new-arrivals">New arrivals</a>
                     <a href="/contact">Contacts</a>
                 </div>
                 <div class="nav-icons">
                     <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
-                    <a href="#" class="icon-link"id="wishlistIcon"> <img src="./img/heart-1.png"  alt="Wishlist"></a>
-                
-                    <a href="#" class="icon-link"id="cartIcon"><img src="./img/cart.svg" id="cartIcon"  alt="Cart"></a>
+                    <a href="#" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="#" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
                     <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
                 </div>
             </nav>
-            
         </div>
     </header>
 
-    <main class="main-content" id="verify-otp-step2-page">
-        <h1 class="welcome-heading">Verify OTP<span class="asterisk">*</span></h1>
-        <p class="welcome-text">Enter code sent to your number</p>
-        <p class="welcome-text">We sent it to the number ##########</p>
-        <div class="form-container">
-            <form id="otp-step2-form" action="create-account.html">
-                <div class="form-group">
-                    <label for="otp-step2">Enter OTP</label>
-                    <input type="text" id="otp-step2" name="otp-step2" placeholder="" required>
-                    <p class="otp-message">Didn’t receive OTP? !00:10</p>
-                </div>
-                <button type="submit" class="btn">Verify</button>
-                <a href="#" class="resend-link">Resend OTP</a>
-            </form>
+    <div class="profile-header">
+        <h1>My Profile</h1>
+    </div>
+
+    <div class="profile-content">
+        <div class="sidebar">
+            <ul>
+                <li><a href="./myinformations.html">My Information</a></li>
+                <li><a href="./myadresses.html">My Addresses</a></li>
+                <li><a href="./order.html" class="active">My Orders</a></li>
+                <li><a href="/account/logout">Log Out</a></li>
+            </ul>
         </div>
-    </main>
+        <div class="main-content profile-main">
+            <div class="order-details">
+                <div class="order-details-header">
+                    <div class="order-id-container">
+                        <img src="./img/cart.svg" alt="Cart Icon" class="order-cart-icon">
+                        <span class="order-id">Order ID: #CTH-198203</span>
+                    </div>
+                    <div class="order-meta">
+                        <span class="order-date">Order date: 30 March 2025 at 13:00 PM</span>
+                        <span class="order-status">Complete</span>
+                    </div>
+                </div>
+
+                <div class="order-details-items">
+                    <h3 class="section-title">Order Items</h3>
+                    <div class="order-product">
+                        <div class="order-product-image">
+                            <img src="./img/Group 170.png" alt="Luxury Macaron Box">
+                        </div>
+                        <div class="order-product-details">
+                            <h3 class="order-product-title">Luxury Macaron Box</h3>
+                            <p class="order-product-specs">38 pcs</p>
+                            <p class="order-product-quantity">Quantity: 1</p>
+                            <p class="order-product-price">27.000 KD</p>
+                        </div>
+                    </div>
+                    <div class="product-separator"></div>
+                    
+                </div>
+
+               
+                
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -90,12 +121,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('otp-step2-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = 'create-account.html';
-        });
-    </script>
 </body>
 </html>

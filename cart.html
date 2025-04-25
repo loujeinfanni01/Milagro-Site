@@ -1,55 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagro - Verify OTP Step 2</title>
+    <title>Milagro - Shopping Cart</title>
+    <link rel="stylesheet" href="./shop.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <!-- Navigation Bar -->
             <nav class="navbar">
                 <div class="logo">
                     <img src="./img/logo.svg" alt="MILAGRO Logo">
                 </div>
                 <div class="nav-links">
-                    <a href="/">Home</a>
+                    <a href="./index.html">Home</a>
                     <a href="./shop.html">Shop</a>
                     <a href="/new-arrivals">New arrivals</a>
                     <a href="/contact">Contacts</a>
                 </div>
                 <div class="nav-icons">
                     <a href="#" class="icon-link"><img src="./img/Group 9.svg" alt="Search"></a>
-                    <a href="#" class="icon-link"id="wishlistIcon"> <img src="./img/heart-1.png"  alt="Wishlist"></a>
-                
-                    <a href="#" class="icon-link"id="cartIcon"><img src="./img/cart.svg" id="cartIcon"  alt="Cart"></a>
+                    <a href="./wishlist.html" class="icon-link" id="wishlistIcon"><img src="./img/heart-1.png" alt="Wishlist"></a>
+                    <a href="./cart.html" class="icon-link" id="cartIcon"><img src="./img/cart.svg" alt="Cart"></a>
                     <a href="./welcome.html" class="icon-link"><img src="./img/account.svg" alt="Account"></a>
                 </div>
             </nav>
-            
         </div>
     </header>
 
-    <main class="main-content" id="verify-otp-step2-page">
-        <h1 class="welcome-heading">Verify OTP<span class="asterisk">*</span></h1>
-        <p class="welcome-text">Enter code sent to your number</p>
-        <p class="welcome-text">We sent it to the number ##########</p>
-        <div class="form-container">
-            <form id="otp-step2-form" action="create-account.html">
-                <div class="form-group">
-                    <label for="otp-step2">Enter OTP</label>
-                    <input type="text" id="otp-step2" name="otp-step2" placeholder="" required>
-                    <p class="otp-message">Didn’t receive OTP? !00:10</p>
+    <!-- Main Content -->
+    <main class="cart-main">
+        <div class="shop-container">
+            <div class="cart-content">
+                <h2>Shopping Cart</h2>
+                <div class="cart-body">
+                    <div class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="cart-summary-row">
+                            <span>Sub Total</span>
+                            <span class="cart-subtotal-amount">0.000 KD</span>
+                        </div>
+                        <div class="cart-summary-row">
+                            <span>Delivery</span>
+                            <span class="cart-delivery-amount">1.000 KD</span>
+                        </div>
+                        <div class="cart-promo-code">
+                            <input type="text" placeholder="Promo Code">
+                        </div>
+                        <div class="cart-summary-row cart-total-row">
+                            <span>Total</span>
+                            <span class="cart-total-amount">1.000 KD</span>
+                        </div>
+                        <button class="shop-btn shop-btn-checkout">CHECKOUT</button>
+                    </div>
                 </div>
-                <button type="submit" class="btn">Verify</button>
-                <a href="#" class="resend-link">Resend OTP</a>
-            </form>
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section logo-section">
@@ -59,9 +75,9 @@
             <div class="footer-section">
                 <h3 class="footer-heading">LINKS</h3>
                 <div class="footer-links">
-                    <a href="./index.html">Home</a>
+                    <a href="/">Home</a>
                     <a href="./shop.html">Shop</a>
-                    <a href="./contact.html">Contact</a>
+                    <a href="./contact">Contact</a>
                     <a href="./new-arrivals">New Arrivals</a>
                 </div>
             </div>
@@ -91,11 +107,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('otp-step2-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = 'create-account.html';
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="./shop.js"></script>
 </body>
 </html>

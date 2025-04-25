@@ -1,66 +1,57 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.products-slider');
-    const prevBtn = document.querySelector('.prev-button');
-    const nextBtn = document.querySelector('.next-button');
-    const productCards = document.querySelectorAll('.product-card');
-    
-    const cardWidth = productCards[0].offsetWidth + 15; // Card width + gap
+    const slider = document.querySelector('#products-slider');
+    const prevBtn = document.querySelector('#prev-button');
+    const nextBtn = document.querySelector('#next-button');
+    const productCards = slider.children;
+
+    if (!slider || !prevBtn || !nextBtn || productCards.length === 0) {
+        console.error('Required elements not found or no product cards. Slider will not initialize.');
+        return;
+    }
+
+    const cardWidth = productCards[0].offsetWidth + 30; // Card width + gap (updated to 30px)
     let currentPosition = 0;
-    
-    // Calculer la position maximale du slider
-    function updateMaxPosition() {
-        let visibleCards = 4;
+    const totalCards = productCards.length;
+    let visibleCards = 4;
+
+    function updateVisibleCards() {
         if (window.innerWidth <= 992) visibleCards = 3;
-        if (window.innerWidth <= 768) visibleCards = 2;
-        if (window.innerWidth <= 480) visibleCards = 1;
-        
-        return -(productCards.length - visibleCards) * cardWidth;
+        else if (window.innerWidth <= 768) visibleCards = 2;
+        else if (window.innerWidth <= 480) visibleCards = 1;
+        else visibleCards = 4;
     }
-    
-    let maxPosition = updateMaxPosition();
-    
-    // Fonction pour mettre à jour la visibilité des flèches
-    function updateButtonVisibility() {
-        // Si on est au début du slider, cacher la flèche gauche
-        if (currentPosition === 0) {
-            prevBtn.style.opacity = "0";
-        } else {
-            prevBtn.style.opacity = "1";
-        }
-        
-        // Si on est à la fin du slider, cacher la flèche droite
-        if (currentPosition <= maxPosition) {
-            nextBtn.style.opacity = "0";
-        } else {
-            nextBtn.style.opacity = "1";
-        }
+
+    updateVisibleCards();
+    let maxPosition = -(totalCards - visibleCards) * cardWidth;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(${currentPosition}px)`;
+        prevBtn.style.opacity = currentPosition === 0 ? "0" : "1";
+        nextBtn.style.opacity = currentPosition <= maxPosition ? "0" : "1";
     }
-    
-    // Exécuter au chargement pour s'assurer que la première flèche est correctement visible
-    updateButtonVisibility();
-    
+
     prevBtn.addEventListener('click', function() {
         if (currentPosition < 0) {
             currentPosition += cardWidth;
-            slider.style.transform = `translateX(${currentPosition}px)`;
-            updateButtonVisibility();
+            updateSlider();
         }
     });
-    
+
     nextBtn.addEventListener('click', function() {
-        maxPosition = updateMaxPosition();
+        updateVisibleCards();
+        maxPosition = -(totalCards - visibleCards) * cardWidth;
         if (currentPosition > maxPosition) {
             currentPosition -= cardWidth;
-            slider.style.transform = `translateX(${currentPosition}px)`;
-            updateButtonVisibility();
+            updateSlider();
         }
     });
-    
-    // Mettre à jour lors du redimensionnement de la fenêtre
+
     window.addEventListener('resize', function() {
-        maxPosition = updateMaxPosition();
+        updateVisibleCards();
+        maxPosition = -(totalCards - visibleCards) * cardWidth;
         currentPosition = 0;
-        slider.style.transform = `translateX(0)`;
-        updateButtonVisibility();
+        updateSlider();
     });
+
+    updateSlider();
 });
